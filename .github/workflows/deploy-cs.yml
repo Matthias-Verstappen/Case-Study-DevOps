@@ -1,0 +1,25 @@
+name: "Deploy Case Study"
+
+on:
+  push:
+     tags:
+       - "case-study/v*"
+
+env:
+  PROJECT_PATH: Case_study_r0851784\Case_study_r0851784.csproj
+
+jobs:
+   deploy:
+      runs-on: windows-latest
+      steps:
+        - uses: actions/checkout@v2
+
+        - uses : actions/setup-dotnet@v1
+          with:
+            dotnet-version: 6.0
+
+        - run: dotnet restore ${{ env. PROJECT_PATH }}
+
+        - run: dotnet build ${{ env. PROJECT_PATH }} -c Release --no-restore
+
+        - run: dotnet public ${{ env. PROJECT_PATH }} -c Release --self-contained -r win-x64 p:PublishSingleFile=true
