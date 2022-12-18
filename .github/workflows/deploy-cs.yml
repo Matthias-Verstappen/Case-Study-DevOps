@@ -1,7 +1,5 @@
 name: "Deploy Case Study"
 
-on:
-  push:
 
 env:
   PROJECT_PATH: Case_study_r0851784/Case_study_r0851784.csproj
@@ -12,7 +10,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
 
-        - uses: actions/setup-dotnet@v6.0.x
+        - uses: actions/setup-dotnet@v1
           with:
             dotnet-version: 6.0
 
