@@ -14,7 +14,7 @@ namespace Case_study_r0851784
 
 		public IDbConnection GetConnection()
 		{
-			return new SqliteConnection(@"Data Source=.\BerkvenDB.db;New=true");
+			return new SqliteConnection(@"Data Source=C:\Users\Public\Documents\BerkvenDB.db;New=true");
 		}
 
 		public void createDatabase()
