@@ -2,8 +2,6 @@ name: "Deploy Case Study"
 
 on:
   push:
-     tags:
-       - "case-study/v*"
 
 env:
   PROJECT_PATH: Case_study_r0851784\Case_study_r0851784.csproj
