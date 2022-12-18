@@ -9,6 +9,7 @@ namespace Case_study_r0851784
 		public Members()
 		{
 			InitializeComponent();
+			LoadData();
 		}
 		public Context _context { get; } = new Context();
 
@@ -25,11 +26,6 @@ namespace Case_study_r0851784
 			}
 		}
 
-		//CREATE
-		private void button1_Click(object sender, EventArgs e)
-		{
-			_context.createDatabase();
-		}
 
 		//ADD
 		private void button2_Click(object sender, EventArgs e)
@@ -88,15 +84,6 @@ namespace Case_study_r0851784
 			}
 		}
 
-		private void Form1_Load(object sender, EventArgs e)
-		{
-			_context.createDatabase();
-
-			if (!System.IO.File.Exists(@"\Data source=C:\\Devops\\BerkvenDB.db"))
-			{
-				LoadData();
-			}
-		}
 
 		private void leaderNav_Click(object sender, EventArgs e)
 		{

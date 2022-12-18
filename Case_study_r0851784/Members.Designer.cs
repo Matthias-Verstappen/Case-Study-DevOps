@@ -197,7 +197,6 @@
 			this.Controls.Add(this.textBox2);
 			this.Name = "Members";
 			this.Text = "Form1";
-			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			this.ResumeLayout(false);

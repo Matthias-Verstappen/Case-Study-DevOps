@@ -30,7 +30,6 @@ namespace Case_study_r0851784
 				var list = db.Query<Leader>("select * from Leaders").ToList();
 				if (list.Count() > 0)
 				{
-					//MessageBox.Show(list[0].ToString());
 					dataGridView2.DataSource = list;
 				}
 			}
