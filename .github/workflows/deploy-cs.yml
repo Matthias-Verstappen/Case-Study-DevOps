@@ -12,7 +12,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
 
-        - uses: actions/setup-dotnet@v1.2
+        - uses: actions/setup-dotnet@v1.2.*
           with:
             dotnet-version: 6.0
 
@@ -27,7 +27,7 @@ jobs:
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        - uses: csexton/release-asset-actions@v2
+        - uses: csexton/release-asset-action@v2
           with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
             pattern: Case_study_r0851784/bin/Release/net6.0-windows/win-x64/publish/*.exe
